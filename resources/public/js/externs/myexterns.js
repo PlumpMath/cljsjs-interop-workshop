@@ -1,6 +1,6 @@
-//var chance = {
-//  "bool" : function() {}
-//}
+var chance = {
+  "bool" : function() {}
+}
 
 /*
 var chance = {
@@ -12,6 +12,6 @@ var chance = {
 //  "bool" = function() {}
 //);
 
-var chance1 = new Chance({
-  "random" : function() {}
-});
+//var chance1 = new Chance({
+//  "random" : function() {}
+//});
