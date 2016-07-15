@@ -39,7 +39,7 @@
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
                            :optimizations :none
-                           :foreign-libs [{:file "resources/public/js/vendor/chance.js"
+                           :foreign-libs [{:file "resources/public/js/vendors/chance.js"
                                            :provides  ["mychance"]}]
                            :externs ["resources/public/js/externs/myexterns.js"]}}
                ;; This next build is an compressed minified build for
@@ -50,6 +50,9 @@
                 :compiler {:output-to "resources/public/js/compiled/cljsjs_interop_workshop.js"
                            :main cljsjs-interop-workshop.core
                            :optimizations :advanced
+                           :foreign-libs [{:file "resources/public/js/vendors/chance.js"
+                                           :provides  ["mychance"]}]
+                           :externs ["resources/public/js/externs/myexterns.js"]
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
