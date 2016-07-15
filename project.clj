@@ -39,10 +39,9 @@
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
                            :optimizations :none
-                           :foreign-libs
-                           [{:file "resources/public/js/chance.js"
-                             :provides  ["mychance"]}]
-                           :externs ["resources/public/js/vendor/myexterns.js"]}}
+                           :foreign-libs [{:file "resources/public/js/vendor/chance.js"
+                                           :provides  ["mychance"]}]
+                           :externs ["resources/public/js/externs/myexterns.js"]}}
                ;; This next build is an compressed minified build for
                ;; production. You can build this with:
                ;; lein cljsbuild once min
