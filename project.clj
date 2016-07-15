@@ -31,7 +31,8 @@
                            ;; in the default browser once Figwheel has
                            ;; started and complied your application.
                            ;; Comment this out once it no longer serves you.
-                           :open-urls ["http://localhost:3449/index.html"]}
+                           ;; :open-urls ["http://localhost:3449/index.html"]
+                           }
 
                 :compiler {:main cljsjs-interop-workshop.core
                            :asset-path "js/compiled/out"
@@ -42,12 +43,17 @@
                            :foreign-libs [{:file "resources/public/js/vendors/chance.js"
                                            :provides  ["mychance"]}]
                            :externs ["resources/public/js/externs/myexterns.js"]}}
-               ;; This next build is an compressed minified build for
-               ;; production. You can build this with:
+               ;;-----------------------------------------------------------------
+               ;;-----------------------------------------------------------------
+               ;;-----------------------production mode---------------------------
+               ;;-----------------------------------------------------------------
+               ;;-----------------------------------------------------------------
+               ;; This next build is an compressed minified build for production.
+               ;; You can build this with:
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/cljsjs_interop_workshop.js"
+                :compiler {:output-to "resources/public/js/production/app.js"
                            :main cljsjs-interop-workshop.core
                            :optimizations :advanced
                            :foreign-libs [{:file "resources/public/js/vendors/chance.js"
